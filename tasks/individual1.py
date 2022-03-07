@@ -9,20 +9,16 @@
 
 class Number:
 
-
     def __init__(self, first, second):
         self.first = first
         self.second = second
-
 
     def read(self):
         self.first = float(input("Введите дробное число >> "))
         self.second = int(input("Введите целое число >> "))
 
-
     def display(self):
         print(f"Число возведенное в степень {power(self)}")
-
 
 def power(self):
     return self.first ** self.second
