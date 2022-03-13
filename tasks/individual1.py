@@ -8,24 +8,23 @@
 """
 
 class Number:
-
-
-    def __init__(self, first, second):
+    def __init__(self, first=0, second=0):
         self.first = first
         self.second = second
-
 
     def read(self):
         self.first = float(input("Введите дробное число >> "))
         self.second = int(input("Введите целое число >> "))
 
-
     def display(self):
         print(f"Число возведенное в степень {power(self)}")
 
-
 def power(self):
-    return self.first ** self.second
+    # Если число возводимое в степень равно 0
+    if self.first == 0:
+        raise ValueError
+    else:
+        return self.first ** self.second
 
 
 if __name__ == "__main__":
