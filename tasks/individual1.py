@@ -17,14 +17,14 @@ class Number:
         self.second = int(input("Введите целое число >> "))
 
     def display(self):
-        print(f"Число возведенное в степень {power(self)}")
+        print(f"Число возведенное в степень", power(self.first, self.second))
 
-def power(self):
+def power(first, second):
     # Если число возводимое в степень равно 0
-    if self.first == 0:
+    if first == 0:
         raise ValueError
     else:
-        return self.first ** self.second
+        return first ** second
 
 
 if __name__ == "__main__":
