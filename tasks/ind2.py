@@ -16,7 +16,6 @@ class Vector3D:
         self.y = y
         self.z = z
 
-
     def read(self, prompt=None):
         line = input() if prompt is None else input(prompt)
         parts = list(map(int, line.split(' ', maxsplit=2)))
@@ -27,10 +26,8 @@ class Vector3D:
         self.y = parts[1]
         self.z = parts[2]
 
-
     def display(self):
         print(f"Координаты - {self.x}, {self.y}, {self.z}")
-
 
     # Сложение
     def add(self, rhs):
@@ -39,14 +36,12 @@ class Vector3D:
         else:
             raise ValueError
 
-
     # Вычитание
     def sub(self, rhs):
         if isinstance(rhs, Vector3D):
             return Vector3D((rhs.x - self.x), (rhs.y - self.y), (rhs.z - self.z))
         else:
             raise ValueError
-
 
     # Скалярное произведение
     def dot(self, rhs):
@@ -55,14 +50,12 @@ class Vector3D:
         else:
             raise ValueError
 
-
     # Сравнение векторов
     def equals(self, rhs):
         if isinstance(rhs, Vector3D):
             return (self.x == rhs.x) and (self.y == rhs.y) and (self.z == rhs.z)
         else:
             return False
-
 
     def greater(self, rhs):
         if isinstance(rhs, Vector3D):
@@ -72,7 +65,6 @@ class Vector3D:
         else:
             return False
 
-
     def less(self, rhs):
         if isinstance(rhs, Vector3D):
             vector1 = (self.x, self.y, self.z)
@@ -80,7 +72,6 @@ class Vector3D:
             return vector1 < vector2
         else:
             return False
-
 
     # Вычисление длины векторов
     def length(self, rhs):
@@ -90,7 +81,6 @@ class Vector3D:
             return vector1 + vector2
         else:
             raise ValueError
-
 
     # Сравнение длины векторов
     def equal(self, rhs):

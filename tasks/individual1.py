@@ -8,6 +8,7 @@
 """
 
 class Number:
+    
     def __init__(self, first=0, second=0):
         self.first = first
         self.second = second
