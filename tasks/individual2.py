@@ -51,7 +51,7 @@ class Vector3D:
     # Скалярное произведение
     def dot(self, rhs):
         if isinstance(rhs, Vector3D):
-            return Vector3D((self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z))
+            return self.x * rhs.x + self.y * rhs.y + self.z * rhs.z
         else:
             raise ValueError
 
@@ -116,5 +116,4 @@ if __name__ == "__main__":
     v4 = v2.sub(v1)
     v4.display()
 
-    v5 = v2.dot(v1)
-    v5.display()
+    print(f"Скалярное произведение векторов: {v2.dot(v1)}")
